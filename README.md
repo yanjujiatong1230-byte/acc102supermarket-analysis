@@ -35,8 +35,8 @@ annex1.csv — Product Catalogue
 |----------|------|-------------|
 | Item Code | string | Unique product identifier |
 | Item Name | string | Product name |
-| Loss Rate (%) | numeric | Vegetable loss rate percentage |
-| Increase Rate (%) | numeric | Price increase rate percentage |
+| Category Code | string | Category identifier |
+| Category Name | string | Product category name |
 
 annex2.csv — Sales Transactions
 
@@ -63,6 +63,7 @@ annex4.csv — Vegetable Loss Rates
 | Variable | Type | Description |
 |----------|------|-------------|
 | Item Code | string | Product identifier (links to annex1.csv) |
+| Item Name | string | Product name |
 | Loss Rate (%) | numeric | Vegetable loss rate percentage |
 
 ---
@@ -110,13 +111,13 @@ A small sample (first 5 rows) of each CSV file is provided in the `sample_data/`
 
  `sample_data/annex1_sample.csv`
 
-| Item Code | Item Name | Loss Rate (%) | Increase Rate (%) |
-|-----------|-----------|---------------|-------------------|
-| 102900005115168 | Niushou Shengcai | 4.39 | 10.46 |
-| 102900005115199 | Sichuan Red Cedar | 10.46 | 10.80 |
-| 102900005115250 | Xixia Black Mushroom (1) | 10.80 | 0.18 |
-| 102900005115625 | Local Xiaomao Cabbage | 0.18 | 8.78 |
-| 102900005115748 | White Caitai | 8.78 | 15.25 |
+| Item Code | Item Name | Category Code | Category Name |
+|-----------|-----------|---------------|---------------|
+| 102900005 | Niushou Shengcai | 1011010101 | Flower/Leaf Vegetables |
+| 102900005 | Sichuan Red Cedar | 1011010101 | Flower/Leaf Vegetables |
+| 104000005 | Local Xiaomao Cabbage | 1011010101 | Flower/Leaf Vegetables |
+| 105000005 | White Caitai | 1011010101 | Flower/Leaf Vegetables |
+| 106000005 | Amaranth | 1011010101 | Flower/Leaf Vegetables |
 
  `sample_data/annex2_sample.csv`
 
@@ -138,6 +139,15 @@ A small sample (first 5 rows) of each CSV file is provided in the `sample_data/`
 | 2020-07-01 | 102900005115793 | 9.24 |
 | 2020-07-01 | 102900005115823 | 7.03 |
 
+ `sample_data/annex4_sample.csv`
+
+| Item Code | Item Name | Loss Rate (%) |
+|-----------|-----------|---------------|
+| 102900005115168 | Niushou Shengcai | 4.39 |
+| 102900005115199 | Sichuan Red Cedar | 10.46 |
+| 102900005115250 | Xixia Black Mushroom (1) | 10.80 |
+| 102900005115625 | Local Xiaomao Cabbage | 0.18 |
+| 102900005115748 | White Caitai | 8.78 |
 
 
 8.Output
